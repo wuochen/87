@@ -1,0 +1,35 @@
+<?php
+session_start();
+require_once 'db_connect.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username']) && isset($_POST['password'])) {
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM users WHERE username = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$username]);
+    $user = $stmt->fetch();
+
+    if ($user && password_verify($password, $user['password'])) {
+        // 登入成功
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['role'] = $user['role'];
+
+        header("Location: 首頁.php?id=5");
+        exit;
+    } else {
+        echo "帳號或密碼錯誤！<a href='小夫我要進了.php'>請重試</a>";
+    }
+
+} else {
+    header("Location: 首頁.php?id=5");
+    exit;
+}
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    echo "<div class='brand'><a class='nav-link' href='店面.php?id=" . htmlspecialchars($row['id']) . "'><h3>" . htmlspecialchars($row['name']) . "</h3></a></div>";
+}
+
+?>

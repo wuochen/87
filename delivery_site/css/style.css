@@ -1,0 +1,207 @@
+/* === 共通設定 === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* === 頁首與 LOGO 區 === */
+.top-bar {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* === 導覽欄 === */
+.navbar {
+    background-color: #8E8E8E;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    font-size: 20px;
+}
+
+/* === 餐廳選單按鈕區塊 === */
+.restaurant-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 12px;
+    gap: 12px;
+}
+
+.restaurant-menu a {
+    text-decoration: none;
+}
+
+.restaurant-menu button {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.restaurant-menu button:hover {
+    background-color: #e0e0e0;
+}
+
+/* === 主內容區塊 === */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content-box {
+    padding: 10px;
+}
+
+/* === 評論與圖片區塊 === */
+.restaurant img {
+    max-width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-box {
+    background: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+textarea, input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.comment-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+/* === 統一按鈕樣式 === */
+button {
+    padding: 10px 18px;
+    font-size: 16px;
+    background-color: #8E8E8E;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #6c6c6c;
+}
+
+/* === 頁腳樣式 === */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-copyright {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.footer-copyright a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-copyright a:hover {
+    color: white;
+}
+
+/* === 音樂按鈕（右下角）=== */
+.bgm-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #534646;
+    border: 1px solid #060101;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #000000;
+    font-size: 14px;
+}
+
+.bgm-btn:hover {
+    background-color: #000000;
+}
+
+/* === 額外內容區塊（品牌介紹、趣味知識）=== */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+.brands, .funfacts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.brand, .fact {
+    width: 45%;
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
